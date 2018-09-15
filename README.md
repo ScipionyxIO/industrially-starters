@@ -2,14 +2,12 @@
 
 [![Build Status](https://travis-ci.com/ScipionyxIO/industrially-starters.svg?branch=master)](https://travis-ci.com/ScipionyxIO/industrially-starters)
 [![Known Vulnerabilities](https://snyk.io/test/github/ScipionyxIO/industrially-starters/badge.svg?targetFile=node%2Fpom.xml)](https://snyk.io/test/github/ScipionyxIO/industrially-starters?targetFile=node%2Fpom.xml)
+[![CodeFactor](https://www.codefactor.io/repository/github/scipionyxio/industrially-starters/badge)](https://www.codefactor.io/repository/github/scipionyxio/industrially-starters)
 
 ![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=scipionyx-io-industrially-starters&metric=vulnerabilities)
 ![Bugs](https://sonarcloud.io/api/project_badges/measure?project=scipionyx-io-industrially-starters&metric=bugs)
 ![CodeSmells](https://sonarcloud.io/api/project_badges/measure?project=scipionyx-io-industrially-starters&metric=code_smells)
 
-[![CodeFactor](https://www.codefactor.io/repository/github/scipionyxio/industrially-starters/badge)](https://www.codefactor.io/repository/github/scipionyxio/industrially-starters)
-
- 
 ![Bugs](https://sonarcloud.io/api/project_badges/quality_gate?project=scipionyx-io-industrially-starters)
 
 ## Deployment and CI/CD Pipelines
