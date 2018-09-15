@@ -6,6 +6,7 @@ notifications:
   email:
   - renato.mendes.1123@gmail.com
 
+# Defines stages
 stages:
 - compile
 - test
