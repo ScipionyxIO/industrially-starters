@@ -12,9 +12,9 @@ stages:
 - name: test
 - name: scan
 - name: deploy-development
-  if: branch = develop and $TRAVIS_PULL_REQUEST" = "false"
+  if: branch = develop and $TRAVIS_PULL_REQUEST = "false"
 - name: release
-  if: branch = master and $TRAVIS_PULL_REQUEST" = "false"
+  if: branch = master and $TRAVIS_PULL_REQUEST = "false"
 
 jdk:
 - openjdk8
