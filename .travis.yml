@@ -8,9 +8,9 @@ notifications:
 
 # Defines stages
 stages:
-- compile
-- test
-- scan
+- name: compile
+- name: test
+- name: scan
 - name: release
   if: branch = master
 - name: deploy
@@ -39,6 +39,6 @@ jobs:
   - stage: scan
     script: mvn org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar
   - stage: release
-    script: mvn test
+    script: mvn deploy
   - stage: deploy
     script: mvn test
