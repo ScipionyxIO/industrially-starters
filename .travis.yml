@@ -25,11 +25,11 @@ cache:
 
 addons:
   sonarcloud:
-    organization: scipionyxio
-    projectKey: product-common-starters
-    login: 085bf98ecfdac03277298430589e7ad750b938b0
+    organization: scipionyx-io-industrially
+    projectKey: scipionyx-io-industrially-starters
+    login: 99f9283d6e9f32ceaf0ce3a702318393c1660cc0
     token:
-      secure: 085bf98ecfdac03277298430589e7ad750b938b0
+      secure: 99f9283d6e9f32ceaf0ce3a702318393c1660cc0
 
 jobs:
   include:
