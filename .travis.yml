@@ -1,0 +1,43 @@
+language: java
+
+sudo: false
+
+notifications:
+  email:
+  - renato.mendes.1123@gmail.com
+
+stages:
+- compile
+- test
+- scan
+- release
+  if: branch = master
+- deploy
+  if: branch = develop
+
+jdk:
+- openjdk8
+
+before_install:
+- cp .travis.maven.settings.xml $HOME/.m2/settings.xml
+
+addons:
+  sonarcloud:
+    organization: scipionyxio
+    projectKey: product-common-starters
+    login: 085bf98ecfdac03277298430589e7ad750b938b0
+    token:
+      secure: 085bf98ecfdac03277298430589e7ad750b938b0
+
+jobs:
+  include:
+  - stage: compile
+    script: mvn compile
+  - stage: test
+    script: mvn test
+  - stage: scan
+    script: mvn org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar
+  - stage: release
+    script: mvn release
+  - stage: deploy
+    script: mvn deploy

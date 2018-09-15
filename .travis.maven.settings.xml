@@ -1,0 +1,21 @@
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
+                          https://maven.apache.org/xsd/settings-1.0.0.xsd">
+    <servers>
+
+        <server>
+            <id>hub.docker.com</id>
+            <username>scipionyx</username>
+            <password>soeusei11</password>
+        </server>
+
+        <server>
+            <id>scipionyx-nexus-snapshot</id>
+            <username>${env.nexus_username}</username>
+            <password>${env.nexus_password}</password>
+        </server>
+
+    </servers>
+
+</settings>
