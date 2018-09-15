@@ -42,7 +42,6 @@ jobs:
             mvn -s settings.xml \
             --batch-mode \
             build-helper:parse-version \
-            release:branch \
-            -DbranchName='${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.nextIncrementalVersion}' \
-            -B \
-            -DskipTests=true
+            versions:set -DnewVersion='${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.nextIncrementalVersion}'
+            deploy
+            -B -DskipTests=true
