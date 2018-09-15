@@ -12,7 +12,7 @@
     <parent>
         <artifactId>parent</artifactId>
         <groupId>io.scipionyx.common.starters</groupId>
-        <version>0.0.2-SNAPSHOT</version>
+        <version>0.0.1-SNAPSHOT</version>
     </parent>
 
 </project>

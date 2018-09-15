@@ -1,7 +1,7 @@
 .project
 /**/.settings
 /**/.m2
-/starters/.idea
+/**/.idea/*
 /**/*.iml
 /**/target
 /**/pom.xml.releaseBackup
