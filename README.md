@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.com/ScipionyxIO/industrially-starters.svg?branch=master)](https://travis-ci.com/ScipionyxIO/industrially-starters)
 
+![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=scipionyx-io-industrially-starters&metric=vulnerabilities)
+
 ## Deployment and CI/CD Pipelines
 
 ### Projects
