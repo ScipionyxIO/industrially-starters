@@ -21,13 +21,13 @@ jdk:
 
 cache:
   directories:
-  - $HOME/.m2
+  - '$HOME/.m2'
+  - '$HOME/.sonar/cache'
 
 addons:
   sonarcloud:
-    organization: scipionyx-io-industrially
-    projectKey: scipionyx-io-industrially-starters
-#    login: 5d31480c120e3a014ffabe4fb506dd7d585c91e7
+    organization: "scipionyx-io-industrially"
+    projectKey: "scipionyx-io-industrially-starters"
     token:
       secure: 5d31480c120e3a014ffabe4fb506dd7d585c91e7
 
