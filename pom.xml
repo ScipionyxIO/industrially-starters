@@ -195,9 +195,9 @@
     </modules>
 
     <scm>
-        <url>https://gitlab.com/ScipionyxIO/Product/Common/starters</url>
-        <connection>scm:git:https://gitlab-ci-token:${CI_PUSH_TOKEN}@gitlab.com/ScipionyxIO/Product/Common/starters.git</connection>
-        <developerConnection>scm:git:https://gitlab-ci-token:${CI_PUSH_TOKEN}@gitlab.com/ScipionyxIO/Product/Common/starters.git</developerConnection>
+        <url>https://github.com/ScipionyxIO/industrially-starters</url>
+        <connection>scm:git:git://github.com/ScipionyxIO/industrially-starters.git</connection>
+        <developerConnection>scm:git:https://github.com/ScipionyxIO/industrially-starters.git</developerConnection>
         <tag>master</tag>
     </scm>
 

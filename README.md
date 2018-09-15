@@ -1,6 +1,9 @@
 # Scipionyx Starters
 
-[![Build Status](https://travis-ci.org/ScipionyxIO/product-common-starters.svg?branch=master)](https://travis-ci.org/ScipionyxIO/product-common-starters)
+[![Build Status](https://travis-ci.com/ScipionyxIO/industrially-starters.svg?branch=master)](https://travis-ci.com/ScipionyxIO/industrially-starters)
+
+![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=scipionyx-io-industrially-starters&metric=vulnerabilities)
+[![CodeFactor](https://www.codefactor.io/repository/github/scipionyxio/industrially-starters/badge)](https://www.codefactor.io/repository/github/scipionyxio/industrially-starters)
 
 ## Deployment and CI/CD Pipelines
 
