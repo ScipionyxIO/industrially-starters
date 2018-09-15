@@ -11,10 +11,10 @@ stages:
 - compile
 - test
 - scan
-- release
+- name: release
   if: branch = master
-- deploy
-  #if: branch = develop
+- name: deploy
+  if: branch = develop
 
 jdk:
 - openjdk8
