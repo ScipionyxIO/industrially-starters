@@ -19,9 +19,6 @@ stages:
 jdk:
 - openjdk8
 
-before_install:
-- cp .travis.maven.settings.xml $HOME/.m2/settings.xml
-
 addons:
   sonarcloud:
     organization: scipionyxio
@@ -33,12 +30,12 @@ addons:
 jobs:
   include:
   - stage: compile
-    script: mvn compile
+    script: mvn -s settings.xml --batch-mode compile
   - stage: test
-    script: mvn test
+    script: mvn -s settings.xml --batch-mode test
   - stage: scan
-    script: mvn org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar
+    script: mvn -s settings.xml --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar
   - stage: deploy-development
-    script: mvn deploy
+    script: mvn -s settings.xml --batch-mode deploy
   - stage: release
-    script: mvn deploy
+    script: mvn -s settings.xml --batch-mode deploy
