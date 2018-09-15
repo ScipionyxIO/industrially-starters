@@ -36,11 +36,10 @@ jobs:
   - stage: scan
     script: mvn -s settings.xml --batch-mode org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar
   - stage: deploy-development
-    script: mvn -s settings.xml \
-            --batch-mode \
-            deploy
+    script: mvn -s settings.xml --batch-mode deploy
   - stage: release
-    script: mvn -s settings.xml \
+    script: |
+            mvn -s settings.xml \
             --batch-mode \
             build-helper:parse-version \
             release:branch \
