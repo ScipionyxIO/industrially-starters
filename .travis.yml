@@ -12,7 +12,7 @@ stages:
 - test
 - scan
 - release
-  #if: branch = master
+  if: branch = master
 - deploy
   #if: branch = develop
 

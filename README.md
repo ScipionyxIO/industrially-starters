@@ -1,6 +1,6 @@
 # Scipionyx Starters
 
-[![Build Status](https://travis-ci.org/ScipionyxIO/product-common-starters.svg?branch=master)](https://travis-ci.org/ScipionyxIO/product-common-starters)
+[![Build Status](https://travis-ci.com/ScipionyxIO/industrially-starters.svg?branch=master)](https://travis-ci.com/ScipionyxIO/industrially-starters)
 
 ## Deployment and CI/CD Pipelines
 
