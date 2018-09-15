@@ -27,9 +27,9 @@ addons:
   sonarcloud:
     organization: scipionyx-io-industrially
     projectKey: scipionyx-io-industrially-starters
-    login: 99f9283d6e9f32ceaf0ce3a702318393c1660cc0
+    login: b91a4e746b6b93533a0d93e7829515a788dc8c2c
     token:
-      secure: 99f9283d6e9f32ceaf0ce3a702318393c1660cc0
+      secure: b91a4e746b6b93533a0d93e7829515a788dc8c2c
 
 jobs:
   include:
