@@ -11,9 +11,9 @@ stages:
 - test
 - scan
 - release
-  if: branch = master
+  #if: branch = master
 - deploy
-  if: branch = develop
+  #if: branch = develop
 
 jdk:
 - openjdk8
@@ -38,6 +38,6 @@ jobs:
   - stage: scan
     script: mvn org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar
   - stage: release
-    script: mvn release
+    script: mvn test
   - stage: deploy
-    script: mvn deploy
+    script: mvn test
