@@ -12,20 +12,24 @@ stages:
 - name: test
 - name: scan
 - name: deploy-development
-  if: branch = develop
+  if: branch = develop AND env(TRAVIS_PULL_REQUEST) = "false"
 - name: release
-  if: branch = master
+  if: branch = master AND env(TRAVIS_PULL_REQUEST) = "false"
 
 jdk:
 - openjdk8
 
+cache:
+  directories:
+  - '$HOME/.m2'
+  - '$HOME/.sonar/cache'
+
 addons:
   sonarcloud:
-    organization: scipionyxio
-    projectKey: product-common-starters
-    login: 085bf98ecfdac03277298430589e7ad750b938b0
+    organization: "scipionyx-io-industrially"
+    projectKey: "scipionyx-io-industrially-starters"
     token:
-      secure: 085bf98ecfdac03277298430589e7ad750b938b0
+      secure: 5d31480c120e3a014ffabe4fb506dd7d585c91e7
 
 jobs:
   include:
