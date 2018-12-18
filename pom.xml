@@ -192,6 +192,7 @@
 
     <modules>
         <module>node</module>
+        <module>service-starter-parent</module>
     </modules>
 
     <scm>
