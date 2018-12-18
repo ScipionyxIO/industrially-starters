@@ -7,8 +7,8 @@
     <servers>
         <server>
             <id>soss-sonatype-snapshots</id>
-            <username>${env.sonatype_USER}</username>
-            <password>${env.sonatype_PASS}</password>
+            <username>${env.SONARTYPE_USER}</username>
+            <password>${env.SONARTYPE_PASS}</password>
         </server>
     </servers>
 
