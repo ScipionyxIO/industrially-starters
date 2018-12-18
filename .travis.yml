@@ -15,9 +15,7 @@ jdk:
 - openjdk8
 
 before_install:
-  - more .travis.maven.settings.xml
-  - more $HOME/.m2/settings.xml
-  - cp .travis.maven.settings.xml $HOME/.m2/settings.xml
+  - cp .travis.maven.settings.xml $HOME/.m2/.travis.maven.settings.xml
 
 cache:
   directories:
@@ -34,4 +32,4 @@ addons:
 jobs:
   include:
     - stage: develop
-      script: mvn -s settings.xml --batch-mode deploy
+      script: mvn -s .travis.maven.settings.xml --batch-mode deploy
