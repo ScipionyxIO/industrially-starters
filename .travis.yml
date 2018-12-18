@@ -15,6 +15,8 @@ jdk:
 - openjdk8
 
 before_install:
+  - more .travis.maven.settings.xml
+  - more $HOME/.m2/settings.xml
   - cp .travis.maven.settings.xml $HOME/.m2/settings.xml
 
 cache:
