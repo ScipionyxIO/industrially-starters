@@ -6,14 +6,9 @@
 
     <servers>
         <server>
-            <id>scipionyx-nexus-snapshot</id>
-            <username>${env.NEXUS_USER}</username>
-            <password>${env.NEXUS_PASS}</password>
-        </server>
-        <server>
-            <id>scipionyx-nexus-release</id>
-            <username>${env.NEXUS_USER}</username>
-            <password>${env.NEXUS_PASS}</password>
+            <id>soss-sonatype-snapshots</id>
+            <username>${env.sonatype_USER}</username>
+            <password>${env.sonatype_PASS}</password>
         </server>
     </servers>
 
