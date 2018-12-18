@@ -32,4 +32,4 @@ addons:
 jobs:
   include:
     - stage: develop
-    script: mvn -s settings.xml --batch-mode deploy
+      script: mvn -s settings.xml --batch-mode deploy
