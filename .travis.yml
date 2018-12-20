@@ -17,9 +17,9 @@ notifications:
 stages:
   - name: build-scan-test
   - name: deploy-test
-    if: branch = develop
+    if: branch = develop and type != pull_request
   - name: deploy-prod
-    if: branch = master
+    if: branch = master and type != pull_request
 
 jdk:
 - openjdk8
@@ -42,5 +42,5 @@ jobs:
       script: mvn --settings .travis.maven.settings.xml --batch-mode test
     - stage: deploy-test
       script: mvn --settings .travis.maven.settings.xml --batch-mode deploy
-    - stage: ddeploy-prod
-      script: mvn --settings .travis.maven.settings.xml --batch-mode release:clean release:prepare -Dusername=scipionyx -Dpassword=1755Gth!2345
+    - stage: deploy-prod
+      script: mvn --settings .travis.maven.settings.xml --batch-mode release:clean release:prepare -Dusername=scipionyx -Dpassword=
