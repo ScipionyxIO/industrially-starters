@@ -42,5 +42,5 @@ jobs:
       script: mvn --settings .travis.maven.settings.xml --batch-mode test
     - stage: deploy-test
       script: mvn --settings .travis.maven.settings.xml --batch-mode deploy
-    - stage: ddeploy-prod
-      script: mvn --settings .travis.maven.settings.xml --batch-mode release:clean release:prepare -Dusername=scipionyx -Dpassword=1755Gth!2345
+    - stage: deploy-prod
+      script: mvn --settings .travis.maven.settings.xml --batch-mode release:clean release:prepare -Dusername=scipionyx -Dpassword=
