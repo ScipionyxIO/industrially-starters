@@ -15,12 +15,11 @@ notifications:
 # Deploy
 # Post deploy
 stages:
-  - name: initialize
-  - name: build
-  - name: test
-  - name: scan
-  - name: release
-  - name: deploy
+  - name: build-scan-test
+  - name: deploy-test
+    if: branch = develop
+  - name: deploy-prod
+    if: branch = master
 
 jdk:
 - openjdk8
@@ -39,10 +38,9 @@ addons:
 
 jobs:
   include:
-    - stage: build
-      script: mvn --settings .travis.maven.settings.xml --batch-mode compile
-    - stage: test
+    - stage: build-scan-test
       script: mvn --settings .travis.maven.settings.xml --batch-mode test
-    - stage: deploy
+    - stage: deploy-test
       script: mvn --settings .travis.maven.settings.xml --batch-mode deploy
-
+    - stage: ddeploy-prod
+      script: mvn --settings .travis.maven.settings.xml --batch-mode release:clean release:prepare -Dusername=scipionyx -Dpassword=1755Gth!2345
