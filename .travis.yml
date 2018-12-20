@@ -17,9 +17,9 @@ notifications:
 stages:
   - name: build-scan-test
   - name: deploy-test
-    if: branch = develop
+    if: branch = develop and type != pull_request
   - name: deploy-prod
-    if: branch = master
+    if: branch = master and type != pull_request
 
 jdk:
 - openjdk8
