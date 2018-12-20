@@ -82,6 +82,16 @@
         </snapshotRepository>
     </distributionManagement>
 
+    <repositories>
+        <repository>
+            <id>oss-sonatype-snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+
     <scm>
         <url>https://github.com/ScipionyxIO/industrially-starters</url>
         <connection>scm:git:https://github.com/ScipionyxIO/industrially-starters.git</connection>
