@@ -7,15 +7,22 @@ notifications:
   - renato.mendes.1123@gmail.com
 
 # Defines stages
+# Initialize: the build process, i.e copy files and prepare commands
+# Build: maven building the packages, compile
+# Test: maven executing the tests
+# Scan: Code scan
+# Release
+# Deploy
+# Post deploy
 stages:
-  - name: branch
-  - name: develop
+  - name: build-scan-test
+  - name: deploy-test
+    if: branch = develop
+  - name: deploy-prod
+    if: branch = master
 
 jdk:
 - openjdk8
-
-before_install:
-  - cp .travis.maven.settings.xml $HOME/.m2/settings.xml
 
 cache:
   directories:
@@ -31,5 +38,9 @@ addons:
 
 jobs:
   include:
-    - stage: develop
-    script: mvn -s settings.xml --batch-mode deploy
+    - stage: build-scan-test
+      script: mvn --settings .travis.maven.settings.xml --batch-mode test
+    - stage: deploy-test
+      script: mvn --settings .travis.maven.settings.xml --batch-mode deploy
+    - stage: ddeploy-prod
+      script: mvn --settings .travis.maven.settings.xml --batch-mode release:clean release:prepare -Dusername=scipionyx -Dpassword=1755Gth!2345

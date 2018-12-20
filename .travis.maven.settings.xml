@@ -6,9 +6,9 @@
 
     <servers>
         <server>
-            <id>soss-sonatype-snapshots</id>
-            <username>${env.SONARTYPE_USER}</username>
-            <password>${env.SONARTYPE_PASS}</password>
+            <id>oss-sonatype-snapshots</id>
+            <username>${env.SONATYPE_USER}</username>
+            <password>${env.SONATYPE_PASS}</password>
         </server>
     </servers>
 
