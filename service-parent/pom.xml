@@ -29,6 +29,14 @@
             <artifactId>vavr</artifactId>
         </dependency>
 
+        <!-- Spring -->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
 
     <dependencyManagement>
@@ -47,12 +55,12 @@
                 <version>0.9.2</version>
             </dependency>
 
-            <!-- Spring -->
+            <!-- Spring Boot -->
 
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-test</artifactId>
-                <scope>test</scope>
+                <version>${spring.boot.version}</version>
             </dependency>
 
         </dependencies>
