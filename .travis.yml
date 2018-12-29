@@ -7,8 +7,10 @@ notifications:
   - renato.mendes.1123@gmail.com
 
 stages:
+  - name: PR
+    if: type = pull_request
   - name: deploy-branch
-    if: branch != develop and branch != master
+    if: branch != develop and branch != master and type != pull_request
   - name: deploy-stage
     if: branch = develop and type != pull_request
   - name: deploy-prod
@@ -24,6 +26,8 @@ cache:
 
 jobs:
   include:
+    - stage: PR
+      script: mvn --settings .travis.maven.settings.xml --batch-mode test
     - stage: deploy-branch
       script: mvn --settings .travis.maven.settings.xml --batch-mode deploy
     - stage: deploy-stage
