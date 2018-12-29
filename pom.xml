@@ -10,7 +10,7 @@
 
     <groupId>org.scipionyx.industrially.starters</groupId>
     <artifactId>root</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <modules>
@@ -162,7 +162,7 @@
     <scm>
         <url>https://github.com/ScipionyxIO/industrially-starters</url>
         <connection>scm:git:https://github.com/ScipionyxIO/industrially-starters.git</connection>
-      <tag>root-0.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
