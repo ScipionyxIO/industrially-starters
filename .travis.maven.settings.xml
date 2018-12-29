@@ -11,7 +11,7 @@
             <password>${env.SONATYPE_PASS}</password>
         </server>
         <server>
-            <id>scm-server</id>
+            <id>github.com</id>
             <username>${env.GITHUB_USER}</username>
             <password>${env.GITHUB_PASS}</password>
         </server>
