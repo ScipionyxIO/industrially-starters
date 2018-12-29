@@ -6,10 +6,13 @@ notifications:
   email:
   - renato.mendes.1123@gmail.com
 
-# Defines stages
 stages:
-  - name: branch
-  - name: develop
+  - name: deploy-branch
+    if: branch != develop and branch != master
+  - name: deploy-stage
+    if: branch = develop and type != pull_request
+  - name: deploy-prod
+    if: branch = master and type != pull_request
 
 jdk:
 - openjdk8
@@ -19,14 +22,12 @@ cache:
   - '$HOME/.m2'
   - '$HOME/.sonar/cache'
 
-addons:
-  sonarcloud:
-    organization: "scipionyx-io-industrially"
-    projectKey: "scipionyx-io-industrially-starters"
-    token:
-      secure: 5d31480c120e3a014ffabe4fb506dd7d585c91e7
-
 jobs:
   include:
-    - stage: develop
-    script: mvn -s settings.xml --batch-mode deploy
+    - stage: deploy-branch
+      script: mvn --settings .travis.maven.settings.xml --batch-mode deploy
+    - stage: deploy-stage
+      script: mvn --settings .travis.maven.settings.xml --batch-mode deploy
+    - stage: deploy-prod
+      script: mvn --settings .travis.maven.settings.xml --batch-mode release:clean release:prepare release:perform
+
