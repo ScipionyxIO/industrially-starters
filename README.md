@@ -21,6 +21,10 @@ The following phases are available from the Gitlab CI/CD menus:
 #### Deploy
 Automatically triggered whenever a version is committed to GitLab.
 The *phase* will run maven's deploy in order to: install, test and deploy the app. 
+https://issues.sonatype.org/browse/OSSRH-44915?filter=-2
+https://central.sonatype.org/pages/apache-maven.html
+
 #### Release
 #### Create Branch
 Convenient Phase allowing creating new branches for the development of new version.
+

@@ -6,9 +6,14 @@
 
     <servers>
         <server>
-            <id>oss-sonatype-snapshots</id>
+            <id>oss-sonatype</id>
             <username>${env.SONATYPE_USER}</username>
             <password>${env.SONATYPE_PASS}</password>
+        </server>
+        <server>
+            <id>scm-server</id>
+            <username>${env.GITHUB_USER}</username>
+            <password>${env.GITHUB_PASS}</password>
         </server>
     </servers>
 
@@ -17,7 +22,7 @@
             <id>scipionyx</id>
             <repositories>
                 <repository>
-                    <id>oss-sonatype-snapshots</id>
+                    <id>oss-sonatype</id>
                     <url>https://oss.sonatype.org/content/repositories/snapshots</url>
                     <snapshots>
                         <enabled>true</enabled>
