@@ -33,5 +33,5 @@ jobs:
     - stage: deploy-stage
       script: mvn --settings .travis.maven.settings.xml --batch-mode deploy
     - stage: deploy-prod
-      script: mvn --settings .travis.maven.settings.xml --batch-mode release:clean release:prepare release:perform
+      script: mvn --settings .travis.maven.settings.xml --batch-mode -B release:clean release:prepare release:perform -DargLine=-DcreateChecksum
 
