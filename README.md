@@ -24,6 +24,11 @@ The *phase* will run maven's deploy in order to: install, test and deploy the ap
 https://issues.sonatype.org/browse/OSSRH-44915?filter=-2
 https://central.sonatype.org/pages/apache-maven.html
 
+
+https://github.com/egineering-llc/gitflow-helper-maven-plugin
+https://github.com/aleksandr-m/gitflow-maven-plugin
+
+
 #### Release
 #### Create Branch
 Convenient Phase allowing creating new branches for the development of new version.
